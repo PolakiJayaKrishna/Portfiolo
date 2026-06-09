@@ -1,0 +1,15 @@
+graph TD
+    A["Client POST: <br> /api/analysis/score"]:::bg --> B{"Is JWT <br> Valid?"}
+    B -- No --> C["Response: 401/403 <br> Unauthorized"]:::fail
+    B -- Yes --> D["API Controller <br> Virtual Thread #vt-0XX"]:::bg
+    D --> E["INSERT INTO analysis_requests <br> Status: PENDING"]:::bg
+    E --> F["Response: 202 Accepted <br> Return ID"]:::success
+    D -. "Async Trigger" .-> G["ExecutorService <br> Background Thread"]:::warning
+    G --> H["Call Google Gemini API <br> over TLS"]:::warning
+    H --> I{"API Call <br> Success?"}
+    I -- No --> J["UPDATE DB Record <br> Status: FAILED"]:::fail
+    I -- Yes --> K["Parse JSON ATS Score"]:::success
+    K --> L["UPDATE DB Record <br> Status: COMPLETED"]:::success
+    M["Client GET: <br> /api/analysis/{id}"]:::bg --> N{"Is Status <br> COMPLETED?"}
+    N -- No --> O["Response: 200 OK <br> Status: PENDING"]:::warning
+    N -- Yes --> P["Response: 200 OK <br> Full JSON Data"]:::success

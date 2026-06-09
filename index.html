@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jaya Krishna Polaki | Java Backend Developer — Spring Boot, Java 21, AWS" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>Jaya Krishna Polaki</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <!-- Mermaid JS (pinned stable version) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true, theme: 'dark'});</script>
+  </head>
+  <body>
+    <!-- Accessibility Announcer for Screen Readers -->
+    <div id="a11y-announcer" aria-live="polite" class="sr-only"></div>
+
+    <!-- FIXED 3D BACKGROUND -->
+    <canvas id="scene" aria-label="3D ResumeRadar backend architecture map"></canvas>
+    
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <a class="brand" href="#"><span>JK</span><b>JAYA KRISHNA POLAKI</b></a>
+      <div class="nav-actions">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <button id="theme" type="button" aria-label="Toggle color theme">Light</button>
+        <a class="resume" href="https://drive.google.com/drive/folders/1xnu5nRMr4Z2t4ymZpFM00o7CR8pB_eDD" target="_blank" rel="noreferrer">Resume</a>
+      </div>
+    </nav>
+
+    <main id="content">
+      
+      <!-- HERO -->
+      <section id="hero" class="hero">
+        <!-- Animated floating particles -->
+        <div class="hero-particles" aria-hidden="true">
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+          <span class="particle p4"></span>
+          <span class="particle p5"></span>
+          <span class="particle p6"></span>
+          <span class="particle p7"></span>
+          <span class="particle p8"></span>
+        </div>
+
+        <div class="hero-inner">
+          <!-- Photo Column -->
+          <div class="hero-photo gs-reveal">
+            <div class="photo-frame" id="photo-frame">
+              <!-- Replace the src below with your actual photo -->
+              <img src="./photo.jpg" alt="Jaya Krishna Polaki" class="photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="photo-fallback" style="display:none;">
+                <span class="photo-initials">JK</span>
+              </div>
+            </div>
+            <div class="photo-status">
+              <span class="status-dot-hero"></span>
+              <span>Open to opportunities</span>
+            </div>
+          </div>
+
+          <!-- Text Column -->
+          <div class="hero-content gs-reveal">
+            <p class="eyebrow">Available for Java Backend / SDE roles</p>
+            <h1>Jaya Krishna<br/>Polaki.</h1>
+            <p class="lead">I engineer <strong>production-ready backend systems</strong> with Java 21, Spring Boot, secure APIs, and cloud delivery.</p>
+            <div class="hero-actions">
+              <a class="primary pulse-glow" href="#trace-section">See Live Execution Trace ↓</a>
+              <a href="#projects">Projects</a>
+              <a href="https://github.com/PolakiJayaKrishna" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/jayakrishna-polaki/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+          <span class="scroll-text">Scroll to explore</span>
+          <span class="scroll-arrow">↓</span>
+        </div>
+      </section>
+
+      <!-- SIGNALS -->
+      <section class="signals" aria-label="Engineering proof">
+        <article class="signal-card gs-reveal">
+          <strong>AWS</strong><span>Live-deployed API</span>
+        </article>
+        <article class="signal-card gs-reveal">
+          <strong>JAVA 21</strong><span>Virtual Threads</span>
+        </article>
+        <article class="signal-card gs-reveal">
+          <strong>SECURE</strong><span>Stateless JWT</span>
+        </article>
+        <article class="signal-card gs-reveal">
+          <strong>TESTED</strong><span>JUnit 5 + Mockito</span>
+        </article>
+      </section>
+
+      <!-- ABOUT / STACK -->
+      <section id="about" class="about-section">
+        <div class="content-grid">
+          <div class="gs-reveal">
+            <p class="eyebrow">Profile / 01</p>
+            <h2>Backend engineering,<br/>built around outcomes.</h2>
+            <p class="lead">I build backend systems that are <strong>secure, testable, and deployed to production</strong> — not just functional demos. My flagship project, ResumeRadar, is a live async AI pipeline running on AWS EC2.</p>
+            <p class="lead">Currently at [24]7.ai, sharpening high-pressure problem-solving daily. Actively seeking Java Backend / SDE roles where systems thinking matters.</p>
+          </div>
+          <div class="stack gs-reveal">
+            <p class="eyebrow">Focused Stack</p>
+            <div class="chips">
+              <span class="chip">Java 21</span>
+              <span class="chip">Spring Boot 3</span>
+              <span class="chip">Spring Security JWT</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Docker</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">AWS EC2</span>
+              <span class="chip">JUnit 5</span>
+              <span class="chip">Mockito</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="projects-section">
+        <div class="container gs-reveal">
+          <p class="eyebrow">Selected Systems / 02</p>
+          <h2>Evidence over buzzwords.</h2>
+          
+          <div class="project-list">
+            <!-- Project 1: ResumeRadar -->
+            <article class="case-card featured gs-reveal">
+              <div class="case-top">
+                <h3>ResumeRadar</h3>
+                <span class="live-badge">🟢 Live on AWS</span>
+              </div>
+              <p>A high-throughput resume processing API. Accepts PDF uploads, offloads parsing to an asynchronous worker, and returns results via a polling endpoint to keep the main thread unblocked.</p>
+              <ul>
+                <li>Built a non-blocking scoring pipeline using Java 21 Virtual Threads and ExecutorService.</li>
+                <li>Implemented a global @RestControllerAdvice to ensure unified error responses across all endpoints.</li>
+                <li>Set up a zero-touch CI/CD pipeline using GitHub Actions for automated AWS EC2 deployments.</li>
+              </ul>
+              <p class="stack-line"><strong>Stack:</strong> Spring Boot 3 · Java 21 · Virtual Threads · Gemini AI · MySQL · Docker · AWS EC2</p>
+              <div class="links">
+                <a href="#trace-section" class="primary" id="rr-trace-link">View 3D Execution Trace ↓</a>
+                <a href="http://18.60.44.43:8080/swagger-ui/index.html#/" target="_blank" rel="noreferrer">Live API</a>
+                <a href="https://github.com/PolakiJayaKrishna/resume-radar" target="_blank" rel="noreferrer">Source Code</a>
+              </div>
+            </article>
+
+            <!-- Project 2: ELMS -->
+            <article class="case-card gs-reveal">
+              <div class="case-top">
+                <h3>Employee Leave Management System</h3>
+                <span class="badge-secondary">REST API</span>
+              </div>
+              <p>A robust leave management API with secure, role-based workflows for employees, managers, and system administrators.</p>
+              <ul>
+                <li>Engineered stateless authentication and authorization using Spring Security and JWTs.</li>
+                <li>Ensured data integrity for concurrent leave approvals using PostgreSQL and @Transactional boundaries.</li>
+                <li>Achieved high test coverage for business rules and edge cases using JUnit 5 and Mockito.</li>
+              </ul>
+              <p class="stack-line"><strong>Stack:</strong> Spring Boot 3 · Java 21 · Spring Security · PostgreSQL · JUnit 5 · Mockito · Docker</p>
+              <div class="links">
+                <a href="#trace-section" class="primary" id="elms-trace-link">View API Execution Trace ↓</a>
+                <a href="https://github.com/PolakiJayaKrishna/employee-leave-management-api" target="_blank" rel="noreferrer">Source Code</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3D TRACE SECTION -->
+      <section id="trace-section" class="trace-section">
+        <div class="trace-hud" id="trace-hud">
+          <div class="hud-left gs-trace">
+            <!-- Project Switcher -->
+            <div class="trace-switcher-container">
+              <span class="trace-switcher-label">Select Project to Trace</span>
+              <div class="trace-switcher">
+                <button class="trace-switch-btn active" data-project="resumeradar">Resume Radar</button>
+                <button class="trace-switch-btn" data-project="elms">ELMS</button>
+              </div>
+            </div>
+            <p class="eyebrow">Live Execution Trace</p>
+            <h2 id="trace-title">Async AI Polling Flow</h2>
+            <p>Click any endpoint on the right to trace its journey through the system.</p>
+            
+            <div class="terminal-hud">
+              <div class="terminal-header">
+                <span>root@aws-ec2:~</span>
+                <div class="sys-status" id="aws-status-row">
+                  <span class="status-dot" id="live-dot"></span>
+                  <span class="status-text" id="live-text">Pinging AWS...</span>
+                </div>
+              </div>
+              <pre id="terminal-output" class="terminal-body">> System ready. Click an endpoint to trace.</pre>
+            </div>
+            
+            <div class="links" style="margin-top: 20px;">
+              <button class="btn-arch" id="btn-view-arch" type="button" data-modal="arch-modal">View Architecture</button>
+            </div>
+          </div>
+          
+          <!-- ResumeRadar Endpoints -->
+          <div class="hud-right gs-trace" id="rr-stage-list" style="display:flex;flex-direction:column;gap:10px">
+            <div class="click-hint">▶ Click to trace the flow</div>
+            <button class="stage-button pulse-hint" data-node="0">
+              <strong>01 / POST /api/analysis</strong>
+              <span>Client uploads PDF + Job Description. Hits API gateway.</span>
+            </button>
+            <button class="stage-button" data-node="1">
+              <strong>02 / Auth Gateway</strong>
+              <span>Spring Security validates stateless JWT signature.</span>
+            </button>
+            <button class="stage-button" data-node="2">
+              <strong>03 / API &amp; Persistence</strong>
+              <span>Virtual Thread creates PENDING record. Returns 202 Accepted.</span>
+            </button>
+            <button class="stage-button" data-node="3">
+              <strong>04 / Async Processor</strong>
+              <span>ExecutorService picks up task. Calls Google Gemini API.</span>
+            </button>
+            <button class="stage-button" data-node="4">
+              <strong>05 / DB Update &amp; Poll</strong>
+              <span>MySQL updated to COMPLETED. Client GET returns full JSON.</span>
+            </button>
+          </div>
+
+          <!-- ELMS Endpoints (hidden by default) -->
+          <div class="hud-right gs-trace" id="elms-stage-list" style="display:none;flex-direction:column;gap:10px">
+            <div class="click-hint">▶ Click to trace the flow</div>
+            <button class="stage-button pulse-hint" data-node="0">
+              <strong>01 / POST /api/auth/register</strong>
+              <span>Employee registers with name, email &amp; password. JWT token returned.</span>
+            </button>
+            <button class="stage-button" data-node="1">
+              <strong>02 / POST /api/auth/authenticate</strong>
+              <span>Employee logs in. Fresh JWT token issued for API access.</span>
+            </button>
+            <button class="stage-button" data-node="2">
+              <strong>03 / POST /api/leave-requests/apply</strong>
+              <span>Employee submits leave with dates &amp; reason. Status set to PENDING.</span>
+            </button>
+            <button class="stage-button" data-node="3">
+              <strong>04 / PUT /api/leave-requests/{id}/status</strong>
+              <span>Manager approves. Status updated, leave balance deducted automatically.</span>
+            </button>
+            <button class="stage-button" data-node="4">
+              <strong>05 / GET /api/leave-requests/all</strong>
+              <span>Manager views all requests. Role-based access enforced by Spring Security.</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- JOURNEY -->
+      <section id="journey" class="journey-section">
+        <div class="container gs-reveal">
+          <p class="eyebrow">Journey / 03</p>
+          <h2>Learning by shipping.</h2>
+          <div class="timeline">
+            
+            <article class="timeline-item expandable" id="tl-work">
+              <div class="timeline-date">FEB 2026 — PRESENT</div>
+              <div class="timeline-body">
+                <div class="timeline-header-row" onclick="toggleTimeline('tl-work')">
+                  <div>
+                    <span class="tl-tag">Work</span>
+                    <h3>Digital Interaction Advisor</h3>
+                    <h4>[24]7.ai · Bengaluru</h4>
+                  </div>
+                  <span class="tl-arrow">↓</span>
+                </div>
+                <div class="timeline-detail">
+                  <p>Resolving customer issues in a high-volume environment. Developed structured problem-solving under real time pressure — a skill that directly transfers to debugging production systems.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item expandable" id="tl-edu">
+              <div class="timeline-date">SEP 2022 — MAY 2026</div>
+              <div class="timeline-body">
+                <div class="timeline-header-row" onclick="toggleTimeline('tl-edu')">
+                  <div>
+                    <span class="tl-tag">Education</span>
+                    <h3>B.Tech, Computer Science &amp; Engineering</h3>
+                    <h4>Kalasalingam Academy of Research and Education &middot; Krishnankovil, Tamil Nadu</h4>
+                  </div>
+                  <span class="tl-arrow">↓</span>
+                </div>
+                <div class="timeline-detail">
+                  <p><strong>CGPA 7.68</strong> &middot; Built production-oriented Java backend projects alongside the degree. Focused on real-world system design rather than academic exercises.</p>
+                  <p style="margin-top:8px"><strong>Certifications (CodeChef):</strong> Design &amp; Analysis of Algorithms &middot; Database Management Systems</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item expandable" id="tl-inter">
+              <div class="timeline-date">JUN 2020 — MAY 2022</div>
+              <div class="timeline-body">
+                <div class="timeline-header-row" onclick="toggleTimeline('tl-inter')">
+                  <div>
+                    <span class="tl-tag">Education</span>
+                    <h3>Intermediate, MPC</h3>
+                    <h4>Kakaraparti Bhavanarayana College &middot; Vijayawada, Andhra Pradesh</h4>
+                  </div>
+                  <span class="tl-arrow">↓</span>
+                </div>
+                <div class="timeline-detail">
+                  <p><strong>75%</strong> &middot; Mathematics, Physics, Chemistry. Foundation for analytical thinking that drives backend system design.</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>© 2026 Jaya Krishna Polaki</p>
+        <div class="footer-links">
+          <a href="https://github.com/PolakiJayaKrishna" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/jayakrishna-polaki/" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:jayakrishnapolaki@gmail.com">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Email
+          </a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ResumeRadar Architecture Modal -->
+    <div id="arch-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" aria-label="Close modal" onclick="document.getElementById('arch-modal').classList.remove('open')">&times;</button>
+        <h2>ResumeRadar — Async AI Polling Flow</h2>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:16px">End-to-end request lifecycle: from client POST to 200 OK JSON response via async background processing.</p>
+        <img src="./arch.png?v=3" alt="ResumeRadar Architecture Diagram" style="width:100%;border-radius:8px;display:block" />
+      </div>
+    </div>
+
+    <!-- ELMS Architecture Modal -->
+    <div id="elms-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" aria-label="Close modal" onclick="document.getElementById('elms-modal').classList.remove('open')">&times;</button>
+        <h2>ELMS — Role-Based Leave Approval Flow</h2>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:16px">JWT-secured leave request flow with role-based approval, balance deduction, and @Transactional safety.</p>
+        <img src="./elms-arch.png?v=3" alt="ELMS Architecture Diagram" style="width:100%;border-radius:8px;display:block" />
+      </div>
+    </div>
+
+    <script>
+      function toggleTimeline(id) {
+        const item = document.getElementById(id);
+        item.classList.toggle('open');
+        const arrow = item.querySelector('.tl-arrow');
+        arrow.textContent = item.classList.contains('open') ? '↑' : '↓';
+      }
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
